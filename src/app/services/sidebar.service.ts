@@ -14,13 +14,18 @@ export class SidebarService {
     },
     {
       title: 'Perfil',
-      icon: 'person',
+      icon: 'manage_accounts',
       url: 'profile'
     },
     {
       title: 'Personas',
       icon: 'accessibility_new',
       url: 'persons'
+    },
+    {
+      title: 'Clientes',
+      icon: 'supervisor_account',
+      url: 'clients'
     }
   ];
 }

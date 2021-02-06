@@ -6,6 +6,10 @@ import { PersonsComponent } from './persons/persons.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from '../interceptors/interceptor.service';
+import { ClientsComponent } from './clients/clients.component';
+import { AddEditClientComponent } from './clients/add-edit-client.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -14,10 +18,14 @@ import { InterceptorService } from '../interceptors/interceptor.service';
     DashboardComponent,
     PersonsComponent,
     ProfileComponent,
+    ClientsComponent,
+    AddEditClientComponent,
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   exports: [
     DashboardComponent
@@ -27,7 +35,7 @@ import { InterceptorService } from '../interceptors/interceptor.service';
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptorService,
       multi: true
-    }
+    },
   ]
 })
 export class PagesModule { }
